@@ -1,0 +1,242 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": 11121000,
+      "name": "Ice Lolly Sticks – Bonus Characters",
+      "artist": "Nancy Fahey",
+      "description": "Designed to give you the ultimate play experience. These bonus characters give endless scenarios to be encountered by the Bakini bottom gang. Quick, better get your hands on a krabby patty!",
+      "price": 3,
+      "category": 1,
+      "rating": 4.5,
+      "image_url": "",
+      "image": "Screenshot_20220515-221404_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": 11121001,
+      "name": "Blue Mouth Octopus",
+      "artist": "Nancy Fahey",
+      "description": "So rare you might even say it has been created in a two year olds imagination. Orange octopus is on the hunt for a tasty meal",
+      "price": 5.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "Screenshot_20220515-221042_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": 14131000,
+      "name": "Ice Lolly Puppets - Not the main three (Additional Characters)",
+      "artist": "Jessica Sharpe",
+      "description": "Perfect to add to your rapidly expanding puppet set, the additional characters ehance role play scenarioa and creative opportunities, just watch out for Plankton.                        Set includes Mr Krab, Plankton, and 2 Krusty Krab customers",
+      "price": 9.99,
+      "category": 4,
+      "rating": 4.7,
+      "image_url": "",
+      "image": "Screenshot_20220515-221232_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": 16111000,
+      "name": "Orders Up!",
+      "artist": "Elijah Fahey",
+      "description": "Krabby Patty? Milkshake? Ice cream? All delicious and available at the Krusty Krab restaurant playset. Order again and again, as long as you have Mr Krab's beloved dollar of course.               Ice lolly puppets sold seperatley",
+      "price": 39.99,
+      "category": 6,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "Screenshot_20220515-221259_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111002,
+      "name": "Steve",
+      "artist": "Elijah Fahey",
+      "description": "A favourite for the young and old - the artist has informed us to \"watch out for the zombies\"",
+      "price": 7.99,
+      "category": 1,
+      "rating": 4.4,
+      "image_url": "",
+      "image": "Screenshot_20220515-221102_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111003,
+      "name": "Squidward",
+      "artist": "Elijah Fahey",
+      "description": "Taken from Elijah's Mini Makes section, Elijah's version of Mister Maker's minute makes. This piece is a quick draw but tactile just like Squidward himself",
+      "price": 7.99,
+      "category": 1,
+      "rating": 4.5,
+      "image_url": "",
+      "image": "Screenshot_20220515-221354_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": 14111001,
+      "name": "Bakini Bottom Puppetts - Main three",
+      "artist": "Elijah Fahey",
+      "description": "Ice Lolly stick puppets featuring the three beloved Spongebob Squarepants characters. Art and play combined. Set of three contains Spongebob Squarepants, Squidward and Patrick Star",
+      "price": 16.99,
+      "category": 4,
+      "rating": 4.7,
+      "image_url": "",
+      "image": "Screenshot_20220515-221222_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111004,
+      "name": "Patrick Paradise",
+      "artist": "Elijah Fahey",
+      "description": "As one super optimistic, happy pink star is simply not enough. Our artist believes this montage of four Patrick Stars is the correct dose",
+      "price": 11.99,
+      "category": 1,
+      "rating": 4.5,
+      "image_url": "",
+      "image": "Screenshot_20220515-221157_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111005,
+      "name": "Sponge always on my mind",
+      "artist": "Elijah Fahey",
+      "description": "Can you ever just hear the incredibly catchy, but equally as annoying voice of Spongebob Squarepants. Squidward can totally relate",
+      "price": 13.99,
+      "category": 1,
+      "rating": 4.7,
+      "image_url": "",
+      "image": "Screenshot_20220515-221130_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": 15111000,
+      "name": "Old and New",
+      "artist": "Elijah Fahey",
+      "description": "Two characters, one body and a lot of paint. The First Avenger and huggy muggy on one body, according to Elijah",
+      "price": 11.99,
+      "category": 5,
+      "rating": 4.4,
+      "image_url": "",
+      "image": "Screenshot_20220515-221115_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": 15111001,
+      "name": "I am Ironman",
+      "artist": "Elijah Fahey",
+      "description": "One of Earth's mightiest heroes, ready to shoot his paint repulser blasters",
+      "price": 13.99,
+      "category": 5,
+      "rating": 4.8,
+      "image_url": "",
+      "image": "Screenshot_20220515-221053_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111006,
+      "name": "Time for some Numberblock fun",
+      "artist": "Elijah Fahey",
+      "description": "1, 2, 3, 4, 5 Numberblocks. If numberblocks is a favourite in your household you probably sang that too. Aldo featuring bonus content, numberblock zero.",
+      "price": 11.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "Screenshot_20220515-221029_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": 17111000,
+      "name": "Neighbourhood Watch",
+      "artist": "Elijah Fahey",
+      "description": "Elijah's two favourite locals, a little brown dog that takes his daily walk past the house. Secondly the ginger cat who is always trying to sneak in",
+      "price": 14.99,
+      "category": 7,
+      "rating": 4.2,
+      "image_url": "",
+      "image": "Screenshot_20220515-221014_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": 12111000,
+      "name": "I Wish I Could",
+      "artist": "Elijah Fahey",
+      "description": "I wish I could ride a skateboard so I can zoom down a big hill super fast, shouting weeeeeee!",
+      "price": 12.99,
+      "category": 2,
+      "rating": 4.7,
+      "image_url": "",
+      "image": "Screenshot_20220515-221005_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": 17111001,
+      "name": "Signs of Summer",
+      "artist": "Elijah Fahey",
+      "description": "Nothing says Great British Summer has arrived like the sunflower",
+      "price": 13.99,
+      "category": 7,
+      "rating": 4.8,
+      "image_url": "",
+      "image": "Screenshot_20220515-220945_Gallery.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": 11111007,
+      "name": "Trapped",
+      "artist": "Elijah Fahey",
+      "description": "Residents of Bakini bottom have taken a visit to dry land, to see the sunflower in bloom. Only to find Squidward is trapped in indestructable mud",
+      "price": 18.99,
+      "category": 1,
+      "rating": 4.4,
+      "image_url": "",
+      "image": "Screenshot_20220515-220932_Gallery.jpg"
+    }
+  }
+]
