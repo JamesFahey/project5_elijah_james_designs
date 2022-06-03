@@ -120,17 +120,12 @@ WSGI_APPLICATION = 'elijah_james_designs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://opdkevcsahftyz:87798765dcc66a3de128b8d8fe6197fdefbb924fcc4b0dd781fbf1a745fdfc8f@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/dfelo6b314lct8')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
