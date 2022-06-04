@@ -1,0 +1,1 @@
+web: gunicorn elijah_james_designs.wsgi:application
