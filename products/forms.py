@@ -24,7 +24,7 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('name', 'body')
+        fields = ('name', 'body',)
 
         # widgets = {
 
