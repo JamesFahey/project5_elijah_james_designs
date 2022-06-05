@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -64,11 +64,34 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    context = {
-        'product': product,
-    }
+    # List of active comments for this post
+    reviews = product.reviews.all
 
-    return render(request, 'products/product_detail.html', context)
+    new_review = None
+
+    if request.method == 'POST':
+        # A comment was posted
+        review_form = ReviewForm(data=request.POST)
+        if new_review.is_valid():
+            # Create Comment object but don't save to database yet          
+            new_review = review_form.save(commit=False)
+            # Assign the current post to the comment
+            new_review.product = product
+            # Save the comment to the database
+            new_review.save()
+    else:
+        review_form = ReviewForm()                   
+    return render(request, 'products/product_detail.html',
+                  {'product': product,
+                   'reviews': reviews,
+                   'new_review': new_review,
+                   'review_form': review_form})
+
+    # context = {
+    #     'product': product,
+    # }
+
+    # return render(request, 'products/product_detail.html', context)
 
 
 @login_required
@@ -135,3 +158,27 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+def add_review(request, product_id):
+    """ Add a review to a product """
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+    else:
+        form = ReviewForm()
+        
+    template = 'products/add_review.html'
+    context = {
+        'form': form,
+        # 'review': review,
+        'product': product,
+    }
+
+    return render(request, template, context)

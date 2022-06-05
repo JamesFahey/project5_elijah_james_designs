@@ -104,6 +104,25 @@
                         {% endwith %}
                     </div>
                 </form>
+                <div class="col-12">
+                    <hr>
+                    <p class="mt-3"><strong>Reviews</strong></p>
+                    <hr>
+                    {% if not product.reviews.all %}
+                    Be the first to review this piece <a href="{% url 'add_review' product.id %}">here</a>
+                    {% else %}
+                    {% for review in product.reviews.all %}
+                    <p class="mb-0">{{ review.body }}</p>
+                    <br>
+                    <p class="mb-0">{{ review.name }}</p>
+                    <p class="mb-0">{{ review.date_added }}</p>
+                    <hr>
+                    {% endfor %}
+                    <a href="{% url 'add_review' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+                        <span class="text-uppercase">Add Review</span>
+                    </a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
