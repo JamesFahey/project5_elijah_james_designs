@@ -28,19 +28,21 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #2D5DA1;
     color: white;
     min-width: 260px;
+    border: 1px solid black;
 }
 
 .btn-black {
-    background: black;
+    background: #2D5DA1;
     color: white;
+    border: 1px solid black;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important;
+    color: #2D5DA1 !important;
     /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
@@ -48,7 +50,7 @@ body {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #2D5DA1;
     color: white !important;
 }
 
@@ -58,12 +60,12 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: white;
+    color: #2D5DA1;
 }
 
 .text-black {
-    color: #000 !important;
+    color: #2D5DA1 !important;
 }
 
 .border-black {
@@ -71,7 +73,7 @@ body {
 }
 
 .bg-black {
-    background: #000 !important;
+    background: #2D5DA1 !important;
 }
 
 .overlay {
@@ -85,7 +87,7 @@ body {
 }
 
 a.category-badge>span.badge:hover {
-    background: #212529 !important;
+    background: #2D5DA1 !important;
     color: #fff !important;
 }
 
@@ -106,6 +108,46 @@ a.category-badge>span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+/* ------------------------------------ Footer */
+footer {
+    background-color: #fff;
+    color: #2D5DA1;
+    position: relative;
+    flex-shrink: 0;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+.block-divider {
+    width: 75px;
+    height: 5px;
+    border: 0;
+    background-color: #444;
+}
+
+.block-divider--blue {
+    background-color: #2D5DA1;
+}
+
+.block-divider--white {
+    background-color: white;
+}
+
+.block-divider--short {
+    width: 35px;
+}
+
+/* ------------------------------- Mailchimp */
+
+/* #mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+} */
 
 /* ------------------------------- bootstrap toasts */
 
@@ -130,7 +172,7 @@ input[name='q']::placeholder {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #2D5DA1;
     position: absolute;
     top: -10px;
     right: 36px;
