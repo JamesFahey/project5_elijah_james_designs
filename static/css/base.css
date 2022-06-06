@@ -140,6 +140,10 @@ footer h2 {
     width: 35px;
 }
 
+.contact-form {
+    margin: 0 auto;
+}
+
 /* ------------------------------- Mailchimp */
 
 /* #mc_embed_signup {
