@@ -110,11 +110,11 @@ input[name='q']::placeholder {
 }
 
 /* ------------------------------------ Footer */
-footer {
+.footer {
     margin-top: 50px;
+    position: relative;
     background-color: #fff;
     color: #000;
-    position: relative;
     flex-shrink: 0;
 }
 
