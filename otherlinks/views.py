@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.contrib import messages
 
+def about_us(request):
+    """View to return shipping and returns info page"""
+    return render(request, 'about/about_us.html')
+
 def contact_us(request):
     """View to return contact us page"""
     # Help from Scottish Coder YouTube Tutorial - link in README
