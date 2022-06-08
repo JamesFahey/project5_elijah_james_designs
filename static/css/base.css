@@ -132,6 +132,11 @@ footer h2 {
     text-align: center;
 }
 
+.footer-padding {
+    padding: 5px;
+    margin-top: 5px;
+}
+
 .block-divider {
     width: 75px;
     height: 5px;
@@ -153,6 +158,17 @@ footer h2 {
 
 .contact-form {
     margin: 0 auto;
+}
+
+.copyright {
+    float: left;
+    width: 95%;
+    padding: 5px;
+}
+
+.copyright p {
+    display: inline-block;
+    margin: 0;
 }
 
 /* ------------------------------------ About us */
