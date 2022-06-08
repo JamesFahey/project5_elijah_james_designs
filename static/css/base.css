@@ -109,6 +109,11 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.welcome-msg {
+    margin: 50px;
+    background-color: #beb5b1a6;
+}
+
 /* ------------------------------------ Footer */
 .footer {
     margin-top: 50px;
@@ -427,5 +432,9 @@ footer h2 {
     .profile p {
         text-align: center;
         /* margin: 20px 60px 80px 60px; */
+    }
+
+    .shop-now-button {
+        min-width: 0;
     }
 }
