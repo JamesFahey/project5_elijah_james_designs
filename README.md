@@ -135,9 +135,9 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
 Elijah James Designs Wireframes can be viewed here:
 
-   [Desktop](assets/readme_imgs/wireframes/desktop/)
+   [Desktop](assets/readme-imgs/wireframes/desktop/)
 
-   [Mobile](assets/readme_imgs/wireframes/mobile/)
+   [Mobile](assets/readme-imgs/wireframes/mobile/)
 
 #Marketing Strategies
 
@@ -179,17 +179,137 @@ The following questions were asked and answered when trying to decide on the bes
 
 ## Facebook
 
-<img src="assets/readme_images/fb-page1.png">
+<img src="assets/readme-imgs/social/facebook1.png">
 
-<img src="assets/readme_images/fb-page2.png">
+<img src="assets/readme-imgs/social/facebook2.png">
 
 ## Subscription
 
 Users also have the opportunity to sign up the Elijah James Designs' newsletter which will keep them up to date will also promotions and deals. This can be found within the footer of the site
 
-<img src="assets/readme_images/subscribe.png" height="250px">
+<img src="assets/readme-imgs/social/subscribe.png">
 
 # Features
+
+## Homepage
+
+### Logo / Shop Name
+
+<img src="assets/readme-imgs/features/logo.png" width="50%">
+
+### Search Bar 
+
+<img src="assets/readme-imgs/features/search-bar.png" width="50%">
+
+### My Account 
+
+<img src="assets/readme-imgs/features/my-account.png" width="50%">
+
+### Shopping Bag 
+
+<img src="assets/readme-imgs/features/shopping-bag.png" width="20%">
+
+### Bootstrap Toast
+
+<img src="assets/readme-imgs/features/toast-success.png" width="50%">
+
+<img src="assets/readme-imgs/features/toast-alert.png" width="50%">
+
+<img src="assets/readme-imgs/features/toast-addtobag.png" width="50%">
+
+### Product Navigation
+
+<img src="assets/readme-imgs/features/product-navigation.png" width="100%">
+
+### Delivery Banner
+
+<img src="assets/readme-imgs/features/delivery-banner.png" width="100%">
+
+### Other Links
+
+<img src="assets/readme-imgs/features/other-links.png" width="50%">
+
+### Welcome Message
+
+<img src="assets/readme-imgs/features/welcome-message.png" width="75%">
+
+## My Account
+
+### Account Registration
+
+<img src="assets/readme-imgs/features/sign-up.png" width="50%">
+
+### Sign In
+
+<img src="assets/readme-imgs/features/sign-in.png" width="50%">
+
+### My Profile
+
+- Delivery Information
+
+<img src="assets/readme-imgs/features/Delivery-info.png" width="50%">
+
+- Order History
+
+<img src="assets/readme-imgs/features/order-history.png" width="50%">
+
+- Order Confirmation
+
+<img src="assets/readme-imgs/features/order-success.png" width="50%">
+
+
+### Sign Out
+
+<img src="assets/readme-imgs/features/sign-out.png" width="50%">
+
+## Products Page 
+
+<img src="assets/readme-imgs/features/products.png" width="75%">
+
+## Product Details 
+
+<img src="assets/readme-imgs/features/product-details.png" width="75%">
+
+## Product Review
+
+Visable on the bottom of the Product Details Page
+
+<img src="assets/readme-imgs/features/reviews.png" width="50%">
+
+## Shopping Bag
+
+<img src="assets/readme-imgs/features/shopping-bag-items.png" width="50%">
+
+## Checkout
+
+<img src="assets/readme-imgs/features/checkout.png" width="50%">
+
+## Footer
+
+<img src="assets/readme-imgs/features/footer.png" width="100%">
+
+### About Us
+
+<img src="assets/readme-imgs/features/about-us.png" width="50%">
+
+## Contact Form
+
+<img src="assets/readme-imgs/features/contact-form.png" width="50%">
+
+## 404 Error Page
+
+<img src="assets/readme-imgs/features/error.png" width="50%">
+
+## Admin Features
+
+### Product Management
+
+<img src="assets/readme-imgs/features/add-product.png" width="50%">
+
+### Edit Products
+
+<img src="assets/readme-imgs/features/edit-product.png" width="50%">
+
 
 ## Features to be Implemented
 
@@ -459,7 +579,7 @@ I then clicked the 'Next' buttons until I reached 'Review Policy'. I gave it a n
 
 24.	Next I attached the policy to the Group I created by returning to the Create User Group page and refreshing the Policies box. I then was able to attach the new policy created by selecting it and finally clicking 'Create Group'.
 
-25.	Finally I created a user to put in the group by going to the User's page and clicking 'Add User'. I created a user named clay-and-fire-static-files-user, gave them Programmatic Access, and clicked 'Create User'.
+25.	Finally I created a user to put in the group by going to the User's page and clicking 'Add User'
 
 26.	I then downloaded the CSV file which contained this User's Access Key and Secret Access Key which I used to authenticate them from my Django app. It is important to download this file as you cannot be re-downloaded and contains the new user's credentials which I next add to the Config Vars on Heroku.
 
