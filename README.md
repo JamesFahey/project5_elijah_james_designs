@@ -103,11 +103,13 @@ After creating my user stories, I assigned each a tag with varying levels of imp
 
 Once all user stories had been finalised, I created Github Project in a Kanban format. Using these project boards allowed for greater ease in organising and prioritising my work. My project board was comprised of columns labelled; To do, In progress, Done and Future content. All user stories, known as issues in the project, began in the ‘To do’ column and progressed them throughout the project.
 
+<img src="assets/readme-imgs/user-stories/user-stories.png">
+
 # Databases
 
 For the live site, I connected Heroku's Postgres Database and while working in my local environment I continued to use the Sequel Light. The Entity-Relationship Diagram below shows how the database models connect in order to produce the finished sites functionality.
 
-<img src="assets/readme_images/databases.png">
+<img src="assets/readme-imgs/databases/database-schema.png">
 
 ## Category
 
@@ -209,11 +211,15 @@ Users also have the opportunity to sign up the Elijah James Designs' newsletter 
 
 <img src="assets/readme-imgs/features/shopping-bag.png" width="20%">
 
-### Bootstrap Toast
+### Bootstrap Success Toast
 
 <img src="assets/readme-imgs/features/toast-success.png" width="50%">
 
+### Bootstrap Alert Toast
+
 <img src="assets/readme-imgs/features/toast-alert.png" width="50%">
+
+### Bootstrap Add to bag Toast
 
 <img src="assets/readme-imgs/features/toast-addtobag.png" width="50%">
 
@@ -309,6 +315,10 @@ Visable on the bottom of the Product Details Page
 ### Edit Products
 
 <img src="assets/readme-imgs/features/edit-product.png" width="50%">
+
+### Admin Panel
+
+<img src="assets/readme-imgs/testing/admin-panel.png" width="50%">
 
 
 ## Features to be Implemented
@@ -469,6 +479,161 @@ I also used Google developer tools to check responsiveness across multiple other
 
 - On the products details page there is a section for all users to leave a review on a product. The small form contains the review body, name of the reviewer and date and time
 
+# General Manual Testing
+
+#### Registering
+
+To test the sign up function I tried to sign up without completing the required field. All gave the below message. I also attempted to sign up without meeting the password requirements, this also failed
+
+<img src="assets/readme-imgs/testing/signup-incomplete.png" width="50%">
+
+Once all required fields are completed sign up will be complete and you will have registered for an account. An email will be sent to the email submitted in the form
+
+<img src="assets/readme-imgs/testing/verification-email.png" width="50%">
+
+After following the link you will be prompted to confirm your email on the site
+
+<img src="assets/readme-imgs/testing/confirm-email.png" width="50%">
+
+Once these stages have been completed the user will receive a success toast in the top right of the screen
+
+<img src="assets/readme-imgs/testing/confirmation-toast.png" width="50%">
+
+#### Log in
+
+For log in testing, I attempted to sign in without completing the fields. I also tried logging in with an incorrect username and incorrect password
+
+<img src="assets/readme-imgs/testing/signin-incomplete.png" width="50%">
+
+Once signed in successfully the user will receive a success toast in the top right of the screen
+
+<img src="assets/readme-imgs/testing/signin-success.png" width="50%">
+
+#### Log out
+
+<img src="assets/readme-imgs/testing/signout.png" width="50%">
+
+As with signing in, once the user has successfully signed out the will receive a confirmation message
+
+<img src="assets/readme-imgs/testing/signout-success.png" width="50%">
+
+### Product Search
+
+To test the product search function I decided to choose a character I new was in the collection and type it into the search bar. All results were successfully pulled through with the correct product count.
+
+<img src="assets/readme-imgs/testing/search-products.png" width="50%">
+
+### Product Navigation/Filtering
+
+Within the product navigation bar is all the categories the items on the site have been filtered into. By selecting one only those products will be visible, again with the correct product count
+
+<img src="assets/readme-imgs/testing/product-filter.png" width="50%">
+
+### Product Sorting
+
+To test the booking form I first sorted items by price low to high, the high to low
+
+<img src="assets/readme-imgs/testing/sorting-low-to-high.png" width="50%">
+
+<img src="assets/readme-imgs/testing/sorting-high-to-low.png" width="50%">
+
+### Add to bag
+
+Testing the add to bag function, once the product is selected the add to bag toast appears top right with the item and details. The bag figure also increases by the product amount
+
+<img src="assets/readme-imgs/testing/add-to-bag.png" width="50%">
+
+### Update Shopping Bag
+
+Testing the shopping bag I increased the quantity of an item and the price increased accordingly. Removing an item a confirmation toast is provided to the customer
+
+<img src="assets/readme-imgs/testing/updating-shopping-bag.png" width="50%">
+
+<img src="assets/readme-imgs/testing/remove-items.png" width="50%">
+
+### Checkout
+
+To test the form I tried to complete the form but leaving out a number of sections to which I received an error message
+
+<img src="assets/readme-imgs/testing/checkout-incomplete.png" width="50%">
+
+In order to test the payment process I used Stripe's test numbers
+
+<img src="assets/readme-imgs/testing/payment-test.png" width="50%">
+
+I tried to complete the form using wrong numbers and incomplete and got the folling message
+
+<img src="assets/readme-imgs/testing/payment-error.png" width="50%">
+
+Once completed successfully users will receive a success toast and be redirected to an order confirmation screen. Here the user will see their order details and delivery info.
+
+<img src="assets/readme-imgs/testing/order-success.png" width="50%">
+
+<img src="assets/readme-imgs/testing/payment-success.png" width="50%">
+
+### Admin Login
+
+To test the admin security I tried to access the /admin section of the site while logged on as another user
+
+<img src="assets/readme-imgs/testing/admin-unauth.png" width="50%">
+
+### Add Product
+
+During production the add product function, in the admin section, was tested and used to add all of the latest arrivals as they weren't included in the product fixture list.
+
+<img src="assets/readme-imgs/testing/admin-add.png" width="50%">
+
+To test the add product function through the live site I created a test product and it was added successfully
+
+<img src="assets/readme-imgs/testing/add-product.png" width="50%">
+
+<img src="assets/readme-imgs/testing/add-product-success.png" width="50%">
+
+### Edit Product
+
+Again during production the edit funtion in the admin section was used to finalise products and their details such as price and descriptions.
+
+<img src="assets/readme-imgs/testing/admin-edit-delete.png" width="50%">
+
+The test the functionality on the live site I used the test product created earlier and attempted to change the price
+
+<img src="assets/readme-imgs/testing/edit-product.png" width="50%">
+
+<img src="assets/readme-imgs/testing/edit-product-success.png" width="50%">
+
+### Edit Product
+
+Then finally to test the delete functionality I deleted the test product. Once I received the delete success message I completed a product search to ensure it had been deleted
+
+<img src="assets/readme-imgs/testing/delete-success.png" width="50%">
+
+<img src="assets/readme-imgs/testing/search-product-test.png" width="50%">
+
+### Review Product
+
+To test the product review I tried to submit a form without completing all sections of the form
+
+<img src="assets/readme-imgs/testing/review-incomplete.png" width="50%">
+
+### Contact Form
+
+To test the contact form I completed the form and checked the sites email to see if it had been received. A success toast was also active on the screen
+
+<img src="assets/readme-imgs/testing/contact-form-success.png" width="50%">
+
+<img src="assets/readme-imgs/testing/contact-form-email.png" width="50%">
+
+### Newsletter Subscription
+
+To test the subscritption sign up I completed the form and accessed the mailchimp website to see if the user had been added to the mail list
+
+<img src="assets/readme-imgs/testing/newsletter-form.png" width="50%">
+
+<img src="assets/readme-imgs/testing/newsletter-success.png" width="50%">
+
+<img src="assets/readme-imgs/testing/mailchimp-contacts.png" width="50%">
+
+
 # Bugs Found
 
 I encountered the following issues whilst building this project:
@@ -478,6 +643,11 @@ I encountered the following issues whilst building this project:
 - The images from the about us section were not showing on the live site. To fix this I used the image url from AWS.
 
 # User Feedback
+
+- More info was needed in the footer. Originally the footer contained only the newsletter sign up and Facebook link. Following the feedback, I added more links for around the site as well as a link to the privacy policy and copyright message.
+-  The welcome message wasn’t very clear on top of the landing image. To rectify this, I added a background colour so the text was more visible.
+- Several spelling errors were located, these have been corrected
+
 
 # Site Design
 
