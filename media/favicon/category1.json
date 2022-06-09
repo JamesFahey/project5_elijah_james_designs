@@ -1,0 +1,65 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "characters",
+      "friendly_name": "Characters"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "sports"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "clearance",
+      "friendly_name": "Clearance"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "deals",
+      "friendly_name": "Deals"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "paintings",
+      "friendly_name": "Paintings"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "crafts",
+      "friendly_name": "Crafts"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "nature",
+      "friendly_name": "Nature"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "new_arrivals",
+      "friendly_name": "New Arrivals"
+    }
+  }
+]
