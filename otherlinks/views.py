@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.contrib import messages
 
+
 def about_us(request):
     """View to return shipping and returns info page"""
     return render(request, 'about/about_us.html')
+
 
 def contact_us(request):
     """View to return contact us page"""
@@ -31,7 +33,7 @@ def contact_us(request):
             message_data['subject'], message, '', ['jcfahey007@gmail.com'])
 
         messages.info(request, (
-            f'Your message has been sent, we will contact you \
+            f'Thanks, your message has been received, we will contact you \
                 via { email } as soon as possible.'))
         return render(request, 'home/index.html')
 
