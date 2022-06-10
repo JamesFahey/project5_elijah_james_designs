@@ -13,20 +13,23 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 # Table of Contents
 
+[Goals](#goals)
+
 [User Experience](#user-experience)
 
-- [Strategy](#strategy)
+- [UX](#ux)
 
 - [User Stories](#user-stories)
 
-- [Scope](#scope)
+- [Databases](#databases)
 
-- [Structure](#structure)
-    - [Databases](#databases)
-    - [Wireframes](#wireframes)
-
+- [Wireframes](#wireframes)
 
 [Marketing Strategies](#marketing-strategies)
+
+- [Facebook](#facebook)
+
+- [Subscription](#subscription)
 
 [Features](#features)
 
@@ -34,15 +37,19 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 [Technologies Used](#technologies-used)
 
-[Testing](#testing)
-
 [Validator Testing](#validator-testing)
 
 [Responsive Testing](#responsive-testing)
 
+[Manual Testing by User Story](#manual-testing-by-user-story)
+
+[General Manual Testing](#general-manual-testing)
+
 [Bugs Found](#bugs-found)
 
 [User Feedback](#user-feedback)
+
+[Site Design](#site-design)
 
 [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
 
@@ -104,6 +111,12 @@ After creating my user stories, I assigned each a tag with varying levels of imp
 Once all user stories had been finalised, I created Github Project in a Kanban format. Using these project boards allowed for greater ease in organising and prioritising my work. My project board was comprised of columns labelled; To do, In progress, Done and Future content. All user stories, known as issues in the project, began in the ‘To do’ column and progressed them throughout the project.
 
 <img src="assets/readme-imgs/user-stories/user-stories.png">
+
+# Significance and Complexity
+
+<img src="assets/readme-imgs/user-stories/sig-and-com.png">
+
+The table above again shows the importance and priority of user stories but also the corresponing complexity required to implement them into the project with 5 being the most import and complex. As seen the payment section was the most complex and as a result took up most of my time. This was due to the steep learning curve and some difficulties during testing. The shopping bag functionality was another area in which I had to allow longer periods of time learning the code required. Using this allowed me to better organise my time management of the project and stay on course to add all required features.
 
 # Databases
 
