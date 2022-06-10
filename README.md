@@ -114,7 +114,7 @@ Once all user stories had been finalised, I created Github Project in a Kanban f
 
 <img src="assets/readme-imgs/user-stories/sig-and-com.png">
 
-The table above again shows the importance and priority of user stories but also the corresponing complexity required to implement them into the project with 5 being the most import and complex. As seen the payment section was the most complex and as a result took up most of my time. This was due to the steep learning curve and some difficulties during testing. The shopping bag functionality was another area in which I had to allow longer periods of time learning the code required. Using this allowed me to better organise my time management of the project and stay on course to add all required features.
+The table above again shows the importance and priority of user stories but also the corresponing complexity required to implement them into the project with 5 being the most important and complex. As seen the payment section was the most complex and as a result took up most of my time. This was due to the steep learning curve and some difficulties during testing. The shopping bag functionality was another area in which I had to allow longer periods of time learning the code required. Using this allowed me to better organise my time management of the project and stay on course to add all required features.
 
 # Databases
 
@@ -373,7 +373,7 @@ Visable on the bottom of the Product Details Page
 The sites responsiveness has been tested on a number of platforms and smaller devise including:
 
 - iPhone X
-- iPhone 6
+- iPhone 8
 - Samsung S21 
 - Samsung S20
 - iPad Pro 9.7"
@@ -568,7 +568,7 @@ In order to test the payment process I used Stripe's test numbers
 
 <img src="assets/readme-imgs/testing/payment-test.png" width="50%">
 
-I tried to complete the form using wrong numbers and incomplete and got the folling message
+I tried to complete the form using wrong numbers and incomplete and got the following message
 
 <img src="assets/readme-imgs/testing/payment-error.png" width="50%">
 
@@ -658,7 +658,7 @@ I encountered the following issues whilst building this project:
 
 # Site Design
 
-The site design adopts a minimalistic visual design reminiscent of a typical art gallery, with a goal of delivering this in a virtual manner, a virtual art gallery
+The site design adopts a minimalistic visual design reminiscent of a typical art gallery, with a goal of delivering this in a virtual manner; a virtual art gallery
 
 ## Fonts
 
