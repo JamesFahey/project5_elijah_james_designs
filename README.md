@@ -1,7 +1,5 @@
 <h1 align="center">Elijah James Designs</h1>
 
-<img src="">
-
 ### **Live Site**
 [Elijah James Designs Live Site](https://elijah-james-designs.herokuapp.com/)
 
