@@ -152,7 +152,7 @@ Elijah James Designs Wireframes can be viewed here:
 
    [Mobile](assets/readme-imgs/wireframes/mobile/)
 
-#Marketing Strategies
+# Marketing Strategies
 
 The following questions were asked and answered when trying to decide on the best marketing strategy.
 
