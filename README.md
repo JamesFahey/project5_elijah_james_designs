@@ -55,7 +55,7 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 [Deployment](#deployment)
 
-[Credit](#credit)
+[Credits](#credit)
 
 [Acknowledgments](#Acknowledgments)
 
@@ -314,10 +314,6 @@ Visable on the bottom of the Product Details Page
 ## Contact Form
 
 <img src="assets/readme-imgs/features/contact-form.png" width="50%">
-
-## 404 Error Page
-
-<img src="assets/readme-imgs/features/error.png" width="50%">
 
 ## Admin Features
 
@@ -664,15 +660,15 @@ I encountered the following issues whilst building this project:
 
 # Site Design
 
-For the site design I chose to go with a clean minimalistic approach reminiscent of an actual art gallery. Choosing this approach keeps all the attention on the products and artwork themselves.
+The site design adopts a minimalistic visual design reminiscent of a typical art gallery, with a goal of delivering this in a virtual manner, a virtual art gallery
 
 ## Fonts
 
-I chose to use the Lato font across the site as it fir with the minimalistic approach
+I chose to use the Lato font uniformly across the site to maintain my design aspect
 
 ## Colour scheme
 
-I played around with a number of different colour scheme but I felt the addition of other colours took it away from the original art gallery idea. Therefore I reverted back to the white and black design seen in the final site.
+After experimenting with various colour schemes, I have concluded a utilitarian approach best suited. Enabling the artwork to stay the dominant feature and maintain the notion of a virtual art gallery
 
 # Search Engine Optimisation (SEO)
 
@@ -790,3 +786,35 @@ I also set DEBUG to 'DEVELOPMENT' in os.environ as for security it cannot be set
 31.	Within this file I imported both our settings from django.conf and the s3boto3 storage class from Django Storages. Then I created custom classes for static storage and media storage which inherited the imported class from Django Storages to give it all its functionality. Then I set the class to store static and media files in the location specified in the USE_AWS if statement within settings.py.
 
 32.	Finally, to complete the deployment of the AWS setup, I committed the changes and pushed them to GitHub. In the command line I then typed the following command: git push heroku main. 
+
+# Credits
+
+### Content
+
+I used the Code Institutes Boutique Ado Follow Along project to help with building this project along with the following websites:
+
+- GDPR Privacy Policy Generator was used to generate the Privacy Policy that was added to the footer.
+
+-  Scottish Coder YouTube Tutorial was recommended for creating a contact form
+
+- Codemy.com and Code Institute blog app was used to help create the review form and database
+
+- XML Sitemap Generator was used this to generate the sitemap for my project.
+
+- Stack Overflow was used to understand error codes
+
+- WebIQ for the tutorial on the about us section
+
+### Styling
+
+- Shutterstock - Landing Image
+- Font Awesome Icons
+- Bootstrap 
+
+### Product Images
+
+Products used for the site are all original pieces
+
+# Acknowledgments
+
+Thank you to everyone who supported and encouraged me throughout this project. Thank you to all the artist for providing such great pieces for the site. Thank you to the tutors at Code Institute, special mention to Ed for helping in my time of need. Special mention to my partner Jessica for keeping the family running smoothly while I dedicated large amounts of my time to this project.

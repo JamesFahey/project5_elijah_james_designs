@@ -8,6 +8,8 @@ def index(request):
 
     return render(request, 'home/index.html')
 
-def handel_404(request, *args, **argv):
-    """View to return 404 error page """
+
+def handel_404(request, exception):
+    """View to return 404 error page if page does not exists"""
+
     return render(request, 'home/404.html')
