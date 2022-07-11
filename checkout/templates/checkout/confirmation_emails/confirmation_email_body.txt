@@ -1,5 +1,3 @@
-{% load humanize %}
-
 Hello {{ order.full_name }}!
 
 This is a confirmation of your order at Elijah James Designs. Your order information is below:
