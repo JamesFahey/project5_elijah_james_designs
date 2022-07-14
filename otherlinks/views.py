@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.contrib import messages
+from .models import Contact
 
 
 def about_us(request):
@@ -17,6 +18,8 @@ def contact_us(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
+        instance = Contact(name=name, email=email, subject=subject, message=message)
+        instance.save()
 
         message_data = {
             'name': name,

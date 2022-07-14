@@ -1,15 +1,18 @@
 from django.shortcuts import render
 
+from products.models import Product
+
 # Create your views here.
 
 
 def index(request):
     """ A view to return the index page """
 
-    return render(request, 'home/index.html')
+    deals = Product.objects.filter(category_id=True)
+    deals_length = len(deals)
 
-
-def handel_404(request, exception):
-    """View to return 404 error page if page does not exists"""
-
-    return render(request, 'home/404.html')
+    context = {
+        'deals': deals,
+        'deals_length': deals_length,
+    }
+    return render(request, 'home/index.html', context)
