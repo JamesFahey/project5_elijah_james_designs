@@ -3,11 +3,14 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from decimal import Decimal
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
+from coupons.models import Coupon
 
 # Create your models here.
 
@@ -27,6 +30,13 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    coupon = models.ForeignKey(
+        Coupon, related_name='orders',
+        null=True, blank=True, on_delete=models.SET_NULL
+        )
+    discount = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(100)])
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
                                         null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
@@ -48,6 +58,19 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
+        if self.discount == 0:
+            self.order_total = self.lineitems.aggregate(
+                Sum('lineitem_total')
+                )['lineitem_total__sum'] or 0
+        else:
+            discount_as_decimal = Decimal(self.discount / 100)
+            total = self.lineitems.aggregate(
+                Sum('lineitem_total')
+                )['lineitem_total__sum'] or 0
+            self.order_subtotal = total
+            discount = total * discount_as_decimal
+            self.order_total = total - discount
+
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:

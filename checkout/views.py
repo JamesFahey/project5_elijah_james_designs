@@ -8,6 +8,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
+from coupons.models import Coupon
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
@@ -39,6 +40,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
+        coupon_id = request.session.get('coupon_id')
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -54,6 +56,10 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+            if coupon_id:
+                coupon = Coupon.objects.get(id=coupon_id)
+                order.coupon = coupon
+                order.discount = coupon.discount
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
@@ -86,6 +92,7 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
+            request.session['coupon_id'] = ''
             return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
         else:
             messages.error(request, 'There was an error with your form. \
@@ -147,6 +154,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    discount = order.order_subtotal - order.order_total
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -179,6 +187,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'discount': discount,
     }
 
     return render(request, template, context)
