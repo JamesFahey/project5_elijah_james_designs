@@ -5,12 +5,14 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from products.models import Product
 
 
 @login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+    products = Product.objects.filter(favourite=request.user.id)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -28,6 +30,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'products': products,
         'on_profile_page': True
     }
 

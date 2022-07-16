@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -6,6 +7,7 @@ from django.db.models.functions import Lower
 from django.views import generic, View
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
+from profiles.models import UserProfile
 
 # Create your views here.
 
@@ -72,8 +74,16 @@ class ProductDetail(View):
         product = get_object_or_404(Product, pk=product_id)
         reviews = product.reviews.order_by("date_added")
 
+        # if request.user.is_authenticated:
+        #     user_profile = get_object_or_404(UserProfile, user=request.user)
+
+        favourite = False
+        if product.favourite.filter(id=request.user.id).exists():
+            favourite = True
+
         context = {
             'product': product,
+            'favourite': favourite,
             "reviews": reviews,
             "review_form": ReviewForm()
         }
@@ -99,17 +109,38 @@ class ProductDetail(View):
                 request,
                 'Failed to add review. Please ensure the form is valid.')
 
+        favourite = False
+        if product.favourite.filter(id=request.user.id).exists():
+            favourite = True
+
         return render(
             request,
             "products/product_detail.html",
             {
                 "product": product,
+                "favourite": favourite,
                 "reviews": reviews,
                 "reviewed": True,
                 "review_form": ReviewForm()
             },
         )
 
+
+def favourite_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.POST:
+        if product.favourite.filter(id=request.user.id).exists():
+            product.favourite.remove(request.user)
+            messages.success(
+                request, f'Removed {product.name} from your favourites'
+                )
+        else:
+            product.favourite.add(request.user)
+            messages.success(
+                request, f'Added {product.name} to your favourites'
+                )
+        return HttpResponseRedirect(
+            reverse('product_detail', args=[product.id]))
 
 @login_required
 def add_product(request):
