@@ -37,44 +37,15 @@
                 <form class="d-inline" action="{% url 'favourite_product' product.id %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" value="{{ product.id }}" class="btn-like">
-                        <i class="fas fa-heart"></i>
+                    <button type="submit" value="{{ product.id }}" class="btn-fav">
+                        <i class="fa-solid fa-heart"></i>
                     </button>
                     {% else %}
-                    <button type="submit" value="{{ product.id }}" class="btn-like">
+                    <button type="submit" value="{{ product.id }}" class="btn-fav">
                         <i class="far fa-heart"></i>
                     </button>
                     {% endif %}
                 </form>
-                {% else %}
-                <!-- Button to trigger account required modal -->
-                <button type="button" class="btn btn-like" data-toggle="modal" data-target="#account-required-modal">
-                    <i class="far fa-heart"></i>
-                </button>
-
-                <!-- Account required Modal -->
-                <div class="modal fade" id="account-required-modal" tabindex="-1" role="dialog"
-                    aria-labelledby="account-required-modal-Label" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="account-required-modal-Label">Account Required</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Please create an account or sign in to use this feature.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark rounded-pill"
-                                    data-dismiss="modal">Close</button>
-                                <a class="btn link-btn rounded-pill" href="{% url 'account_signup' %}">Register</a>
-                                <a class="btn link-btn rounded-pill" href="{% url 'account_login' %}">Sign In</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 {% endif %}
             </div>
             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>

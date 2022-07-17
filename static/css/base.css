@@ -107,6 +107,12 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
+.btn-fav {
+    color: #ff0000;
+    border: none;
+    background: transparent;
+}
+
 .btt-link,
 .update-link,
 .remove-item {
