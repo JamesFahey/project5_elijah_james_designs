@@ -60,15 +60,17 @@
             {% endfor %}
             <hr class="my-0">
             <div class="row text-black text-right">
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total:</p>
-                    <p class="my-0">Delivery:</p>
-                    <p class="my-0">Grand Total:</p>
-                </div>
-                <div class="col-3">
-                    <p class="my-0">£{{ total | floatformat:2 }}</p>
-                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                <div class="ml-md-5 mr-md-5 px-3">
+                    {% if coupon %}
+                    <p>Subtotal: £{{ before_coupon|floatformat:2 }}</p>
+                    <p><strong class="text-success">{{ coupon }}</strong>({{ coupon.discount}}% off): <span
+                            class="text-danger">- £{{ discount | floatformat:2 }}</span></p>
+                    <p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+                    {% else %}
+                    <p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+                    {% endif %}
+                    <p>Delivery: £{{ delivery|floatformat:2 }}</p>
+                    <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                 </div>
             </div>
         </div>

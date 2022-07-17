@@ -2,6 +2,8 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from coupons.models import Coupon
+from coupons.forms import CouponApplyForm
 
 
 def bag_contents(request):
@@ -40,6 +42,19 @@ def bag_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
+    coupon_apply_form = CouponApplyForm()
+    coupon_id = request.session.get('coupon_id')
+    before_coupon = 0
+    if coupon_id:
+        before_coupon = total
+        coupon = Coupon.objects.get(id=coupon_id)
+        discount_as_decimal = Decimal(coupon.discount / 100)
+        discount = total * discount_as_decimal
+        total = total - discount
+    else:
+        coupon = ''
+        discount = 0
+
     grand_total = delivery + total
 
     context = {
@@ -50,6 +65,10 @@ def bag_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'coupon_apply_form': coupon_apply_form,
+        'coupon': coupon,
+        'before_coupon': before_coupon,
+        'discount': discount,
     }
 
     return context

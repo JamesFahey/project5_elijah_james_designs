@@ -1,7 +1,14 @@
-<h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+{% if coupon %}
+<p>Subtotal: £{{ before_coupon|floatformat:2 }}</p>
+<p><strong class="text-success">{{ coupon }}</strong> coupon ({{ coupon.discount}}% off): <span class="text-danger">-
+        £{{ discount | floatformat:2 }}</span></p>
+<p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+{% else %}
+<p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+{% endif %}
 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
 <form action="{% url 'coupon_apply' %}" method="POST">
-    {{ coupon_form.code | crispy }}
+    {{ coupon_apply_form | crispy }}
     {% csrf_token %}
     <button type="submit" class="btn btn-outline-black rounded-0 mt-5">Apply Coupon</button>
 </form>
