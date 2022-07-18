@@ -39,6 +39,9 @@ class Order(models.Model):
         validators=[MinValueValidator(0), MaxValueValidator(100)])
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
                                         null=False, default=0)
+    order_subtotal = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+        )
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2,

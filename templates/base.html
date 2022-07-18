@@ -101,8 +101,8 @@
                         </a>
                     </li>
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -149,7 +149,7 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
+        <div class="delivery-banner row text-center">
             <div class="col bg-black text-white">
                 <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
             </div>
@@ -184,7 +184,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div id="delivery-banner" class="row text-center">
+        <div class="delivery-banner row text-center">
             <div class="col bg-black text-white">
                 <h4 class="logo-font my-1">Keep up to date with what else is going on!</h4>
             </div>
@@ -221,8 +221,8 @@
                         <!-- Mailchimp Signup Form -->
                         <div id="mc_embed_signup" class="">
                             <form
-                                action="https://herokuapp.us18.list-manage.com/subscribe/post?u=b8fe1808fca2d1889ff8c2112&amp;id=ca17401424""
-                                method=" post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                action="https://herokuapp.us18.list-manage.com/subscribe/post?u=b8fe1808fca2d1889ff8c2112&amp;id=ca17401424"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                                 class="validate" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll">
                                     <div class="mc-field-group">
@@ -269,11 +269,11 @@
     </footer>
     <!-- /.footer -->
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script type='text/javascript'>
+    <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script>
         (function ($) {
             window.fnames = new Array();
             window.ftypes = new Array();
