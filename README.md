@@ -53,6 +53,8 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 [Deployment](#deployment)
 
+[Updates](#updates)
+
 [Credits](#credit)
 
 [Acknowledgments](#Acknowledgments)
@@ -812,6 +814,20 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 ### Product Images
 
 Products used for the site are all original pieces
+
+# Updates
+
+- Added a Contact model to store user messages and enquiries
+
+- Added a coupon app. This allowed for customer's to receive discounts via the coupon model. Credit to the youtube tutorial from Packt Video: https://www.youtube.com/watch?v=_dSCGMJcoe4
+
+- Corrected the issues with the 404 page
+
+- Validated all html pages 
+
+- Updated the sites home page with a featured section
+
+- Added the option for users to add products to their favourite section. This can be found on their profile page
 
 # Acknowledgments
 
