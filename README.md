@@ -825,6 +825,8 @@ Products used for the site are all original pieces
 
 - Validated all html pages 
 
+- Users now receive a confirmation email after making an order
+
 - Updated the sites home page with a featured section
 
 - Added the option for users to add products to their favourite section. This can be found on their profile page
