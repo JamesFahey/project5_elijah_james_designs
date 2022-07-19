@@ -18,7 +18,8 @@ def contact_us(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        instance = Contact(name=name, email=email, subject=subject, message=message)
+        instance = Contact(name=name, email=email, subject=subject,
+                           message=message)
         instance.save()
 
         message_data = {

@@ -30,4 +30,3 @@ def coupon_apply(request):
                 "Sorry, that coupon does not exist or is no longer valid"
                 )
     return redirect('view_bag')
-

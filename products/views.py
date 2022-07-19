@@ -142,6 +142,7 @@ def favourite_product(request, product_id):
         return HttpResponseRedirect(
             reverse('product_detail', args=[product.id]))
 
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
